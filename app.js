@@ -11,7 +11,7 @@ app.use(cors({
 	origin: 'https://admin-tool-management-h00mai3hx-claudios-projects-b80c12ff.vercel.app/',
 	methods: 'GET,POST,PUT,DELETE',
 	credentials: true
-	))
+}))
 
 const app = express()
 
