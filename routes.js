@@ -1,9 +1,9 @@
 import express from 'express'
 import {StatusCodes} from 'http-status-codes'
-import users from "./users.data"
-import userService from "./user.service"
+import users from "./users.data.js"
+import userService from "./user.service.js"
 import { expressYupMiddleware } from 'express-yup-middleware'
-import { addUser, getUser, updateUser, deleteUser } from "./user.schemas"
+import { addUser, getUser, updateUser, deleteUser } from "./user.schemas.js"
 
 const router = express.Router()
 
