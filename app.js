@@ -11,7 +11,7 @@ import appRoutes from "./routes.js"
 
 const app = express()
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 app.use(cors())
 const limiter = rateLimit({
 	windowMs: 15 * 60 * 1000, // 15 minutes
@@ -33,5 +33,5 @@ app.use('/v1', appRoutes)
 
 
 app.listen(port, () => {
-    console.log(`hey go to localhost: http://localhost:${port}`)
+    console.log(`hey go to localhost: ${port}`)
 })
