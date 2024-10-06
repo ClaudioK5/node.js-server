@@ -1,4 +1,4 @@
-import users from  "./users.data"
+import users from  "./users.data.js"
 
 const insert = (details) => {
     const newUser = { ...details, id: users.length + 1}
