@@ -1,4 +1,4 @@
-import userDao from "./user.dao"
+import userDao from "./user.dao.js"
 
 
 const getUser = (userId) => {
