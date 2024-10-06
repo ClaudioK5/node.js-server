@@ -6,7 +6,7 @@ import compression from 'compression'
 import cors from 'cors'
 import pino from 'pino'
 
-import appRoutes from "./routes"
+import appRoutes from "./routes.js"
 
 
 const app = express()
