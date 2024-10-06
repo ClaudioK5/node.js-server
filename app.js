@@ -13,11 +13,19 @@ const app = express()
 
 const port = process.env.PORT || 3000;
 
-app.use(cors({
-	origin: 'https://admin-tool-management-h00mai3hx-claudios-projects-b80c12ff.vercel.app/',
-	methods: 'GET,POST,PUT,DELETE',
-	credentials: true
-}))
+const corsOpts = {
+	origin: '*',
+	methods: [
+		'GET',
+		'POST',
+		'PUT',
+		'DELETE',
+		],
+	allowedHeaders: [
+		'Content-Type',
+		]
+};
+app.use(cors(corsOpts))
 const limiter = rateLimit({
 	windowMs: 15 * 60 * 1000, // 15 minutes
 	limit: 1000, // Limit each IP to 100 requests per `window` (here, per 15 minutes).
